@@ -1,0 +1,29 @@
+{
+  "name": "refresher",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "format": "prettier --write \"src/**/*.{js,jsx,css,json} \"",
+    "format:check": "prettier --list-different \"src/**/*.{js,jsx,css,json} \"",
+    "lint": "eslint \"**/*.{js,jsx}\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bllynn/refresher.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Bllynn/refresher/issues"
+  },
+  "homepage": "https://github.com/Bllynn/refresher#readme",
+  "devDependencies": {
+    "eslint": "^5.11.1",
+    "eslint-config-prettier": "^3.3.0",
+    "eslint-plugin-prettier": "^3.0.1",
+    "prettier": "^1.15.3"
+  }
+}
