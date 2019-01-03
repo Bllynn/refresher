@@ -17,7 +17,7 @@ class Results extends React.Component {
   }
   componentDidMount() {
     petfinder.pet
-      .find({ output: "full", location: "Provo, Utah" })
+      .find({ output: "full", location: "Salt Lake City, Utah" })
       .then(data => {
         let pets;
         if (data.petfinder.pets && data.petfinder.pets.pet) {
