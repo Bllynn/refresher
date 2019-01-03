@@ -1,38 +1,23 @@
-const Pet = props => {
-  return React.createElement("div", {}, [
-    React.createElement("h1", {}, props.name),
-    React.createElement("h2", {}, props.animal),
-    React.createElement("h2", {}, props.breed)
-  ]);
-};
+import React from "react";
+import { render } from "react-dom";
+import Results from "./Results";
+import { Router } from "@reach/router";
+import Details from "./Details";
+import { Link } from "@reach/router";
+
 class App extends React.Component {
-  handleTitleClick() {
-    alert("you clicked the title!");
-  }
   render() {
-    return React.createElement("div", {}, [
-      React.createElement(
-        "h1",
-        { onClick: this.handleTitleClick },
-        "Adopt Me!"
-      ),
-      React.createElement(Pet, {
-        name: "Clairabelle",
-        animal: "Dog",
-        breed: "Malti-Poo"
-      }),
-      React.createElement(Pet, {
-        name: "Alex",
-        animal: "Bird",
-        breed: "Parakeet"
-      }),
-      React.createElement(Pet, {
-        name: "Geronimo",
-        animal: "Cat",
-        breed: "Mix"
-      })
-    ]);
+    return (
+      <div>
+        <header>
+          <Link to="/">Adopt Me!</Link>
+        </header>
+        <Router>
+          <Results path="/" />
+          <Details path="/details/:id" />
+        </Router>
+      </div>
+    );
   }
 }
-
-ReactDOM.render(React.createElement(App), document.getElementById("root"));
+render(<App />, document.getElementById("root"));
